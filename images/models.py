@@ -14,4 +14,4 @@ class Image(models.Model):
     created_at= models.DateTimeField(auto_now=True)
     
     def __str__(self) -> str:
-        return self.image_name
+        return self.image_names
