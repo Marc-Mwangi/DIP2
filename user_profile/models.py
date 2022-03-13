@@ -4,6 +4,9 @@ from django.db import models
 class UserProfile(models.Model):
     
     user_name= models.CharField(max_length=1000)
+    #first_name
+    #last_name
+    #email=
     profile_photo = models.ImageField(upload_to='photos/user_profile')
     profile_slug= models.CharField(max_length=200)
     bio = models.CharField(max_length=4000)
