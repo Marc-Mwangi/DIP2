@@ -5,4 +5,10 @@
 {% include 'includes/navbar.html' %}
 
 <h1>feed page works</h1>
+<div>
+    {%for i in picture %}
+    <p class="flex justify-center"> {{ i.image_slug }} </p>
+    <img src="../media/{{i.image}}" class="flex justify-right" height=200px width=200px> 
+    {% endfor %}
+</div>
 {% endblock %}
