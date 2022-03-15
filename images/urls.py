@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
 urlpatterns = [
-    path('', views.Images, name= 'images')
+    path('images/', views.Images, name= 'images'),
+    path('', views.Feed, name= 'feed')
 ]
