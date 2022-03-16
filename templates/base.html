@@ -10,10 +10,34 @@
         <title>View</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         {% block head %} {% endblock %}
     </head>
-    <body>
+    <style>
+        .bod{
+            height: 100%;
+            overflow:hidden;
+            
+        }
+        .fizz{
+            position: absolute;
+            height: 86%;
+            width:70%;
+            overflow:scroll;
+            top: 17%;
+            
+
+        }
+        .con {
+            width: 50vw;
+            position:relative;
+            left: 30%;
+            bottom: 20%;
+            
+        }
+    
+    </style>
+    <body class="bod bg-slate-300">
         
         {% block content %} {% endblock %}
         

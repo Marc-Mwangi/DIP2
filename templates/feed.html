@@ -4,16 +4,18 @@
 
 {% include 'includes/navbar.html' %}
 
-<h1>feed page works</h1>
-<div>
+
+<div class="fizz">
     {%for i in picture %}
-    <p class="flex justify-center"> {{ i.image_slug }} </p>
-    <br>
-    <div class="flex justify-center">
-        <img src="../media/{{i.image}}" height=200px width=200px> 
+    <div class="con bg-slate-200 py-3">
+        <p class="flex justify-center"> {{ i.image_slug }} </p>
+        <br>
+        <div class="flex justify-center">
+            <img src="../media/{{i.image}}" height=200px width=200px> 
+        </div>
+        <br>
+        <br>
     </div>
-    <br>
-    <br>
     {% endfor %}
 </div>
 {% endblock %}
