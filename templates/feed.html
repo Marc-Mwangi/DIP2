@@ -3,6 +3,11 @@
 {% block content %}
 
 {% include 'includes/navbar.html' %}
+<form class="my-8" action={% url 'images' %} method="post" enctype="multipart/form-data"> 
+    <div> 
+        {{form.image}}
+    </div>
+</form>
 
 
 <div class="fizz">
