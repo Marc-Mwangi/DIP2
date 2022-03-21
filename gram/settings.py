@@ -71,7 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'gram.wsgi.application'
 
-
+AUTH_USER_MODEL = 'user_profile.UserAccount'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 

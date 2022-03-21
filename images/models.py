@@ -1,5 +1,5 @@
 from django.db import models
-from user_profile.models import UserProfile
+from user_profile.models import UserAccount
 
 # Create your models here.
 class Image(models.Model):
@@ -8,7 +8,7 @@ class Image(models.Model):
     image_names = models.CharField(max_length=200)
     image_slug = models.CharField(max_length=200)
     image_caption = models.CharField(max_length=2000)
-    profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    profile = models.ForeignKey(UserAccount, on_delete=models.CASCADE)
     likes = models.IntegerField()
     comments = models.CharField(max_length=2000)
     created_at= models.DateTimeField(auto_now=True)
