@@ -22,9 +22,13 @@ def Images(request):
 
 def Feed(request):
     form = UploadForm
+    Image.objects.all()
+    picture= Image.objects.all()
     context= {
-       "form":form, 
+       "form":form,
+       "picture":picture, 
     }
+    
     if request.method == "POST" :
     
         form = UploadForm(request.POST, request.FILES)

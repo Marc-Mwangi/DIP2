@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.db import models
 
+
 # Create your models here.
 class AccountManager(BaseUserManager):
     
@@ -52,9 +53,9 @@ class UserAccount(AbstractBaseUser):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email= models.EmailField(unique=True)
-    profile_photo = models.ImageField(upload_to='photos/user_profile')
-    profile_slug= models.CharField(max_length=200)
-    bio = models.CharField(max_length=4000)
+    profile_photo = models.ImageField( upload_to='photos/user_profile', blank=True)
+    profile_slug= models.CharField(max_length=200, blank=True)
+    bio = models.CharField(max_length=4000, blank=True)
     
     #Required fields
     date_joined = models.DateTimeField(auto_now=True)
