@@ -19,3 +19,8 @@ def register(request):
         
         if user:
             return HttpResponseRedirect('/accounts/login')
+    form = RegistrationForm()
+    context={
+        "form" : form
+    }
+    return render(request, 'signup.html', context=context)

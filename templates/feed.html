@@ -3,11 +3,25 @@
 {% block content %}
 
 {% include 'includes/navbar.html' %}
-<form class="my-8" action={% url 'images' %} method="post" enctype="multipart/form-data"> 
-    <div> 
-        {{form.image}}
-    </div>
+
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+     {{ form.as_p }}
+    <button type="submit">Upload</button>
 </form>
+  
+  {% if img_obj %}
+    <h3>Succesfully uploaded : {{img_obj.title}}</h3>
+    <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+  {% endif %}
+   
+
+
+
+
+
+
 
 
 <div class="fizz">
